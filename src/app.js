@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   handleTermChange(term) {
-    const endpoint = `http://netflixroulette.net/api/api.php?actor=${term}`
+    const endpoint = `https://netflixroulette.net/api/api.php?actor=${term}`
 
     if (term.length === 0) this.setState({films: []});
     if (term.length < 5) return; // api needs at least 5 characters to return a result
