@@ -17,13 +17,19 @@ class Film extends React.Component {
     let src = this.props.poster;
 
     if (this.state.noPicture) {
-      src = 'http://netflixroulette.net/api/posters/60034971.jpg';
+      return (
+        <li className='film film--no-picture'>
+          {this.props.title}
+        </li>
+      )
+    } else {
+      return (
+        <li className='film'>
+          <img src={src} alt={this.props.title} onError={this.handleError} />
+        </li>
+      )
     }
-    return (
-      <li>
-        <img src={src} alt={this.props.title} onError={this.handleError} />
-      </li>
-    )
+
   }
 
 };

@@ -22237,13 +22237,18 @@ var Film = function (_React$Component) {
       var src = this.props.poster;
 
       if (this.state.noPicture) {
-        src = 'http://netflixroulette.net/api/posters/60034971.jpg';
+        return _react2.default.createElement(
+          'li',
+          { className: 'film film--no-picture' },
+          this.props.title
+        );
+      } else {
+        return _react2.default.createElement(
+          'li',
+          { className: 'film' },
+          _react2.default.createElement('img', { src: src, alt: this.props.title, onError: this.handleError })
+        );
       }
-      return _react2.default.createElement(
-        'li',
-        null,
-        _react2.default.createElement('img', { src: src, alt: this.props.title, onError: this.handleError })
-      );
     }
   }]);
 
