@@ -45,6 +45,7 @@ input {
 .film {
   width: 284px;
   height: 405px;
+  position: relative;
 }
 
 .film--no-picture {
@@ -57,4 +58,24 @@ input {
   text-align: center;
   text-shadow: 2px 2px #000;
   font-size: 30px;
+  flex-wrap: wrap;
+}
+
+.additional-info {
+  display: none;
+}
+.film:hover .additional-info {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff
+}
+
+.additional-info p {
+  font-size: 12px;
 }

@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className='search-bar'>
-        <input onChange={event => this.onInputChange(event.target.value)} placeholder="Enter an actor's name to see what movies they have on Netflix!" />
+        <input onChange={event => this.onInputChange(event.target.value)} placeholder="Enter an actor's name to see what movies they are in on Netflix!" />
       </div>
     )
   }

@@ -22240,13 +22240,41 @@ var Film = function (_React$Component) {
         return _react2.default.createElement(
           'li',
           { className: 'film film--no-picture' },
-          this.props.title
+          this.props.title,
+          _react2.default.createElement(
+            'div',
+            { className: 'additional-info' },
+            _react2.default.createElement(
+              'h2',
+              null,
+              this.props.title
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              this.props.summary
+            )
+          )
         );
       } else {
         return _react2.default.createElement(
           'li',
           { className: 'film' },
-          _react2.default.createElement('img', { src: src, alt: this.props.title, onError: this.handleError })
+          _react2.default.createElement('img', { src: src, alt: this.props.title, onError: this.handleError }),
+          _react2.default.createElement(
+            'div',
+            { className: 'additional-info' },
+            _react2.default.createElement(
+              'h2',
+              null,
+              this.props.title
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              this.props.summary
+            )
+          )
         );
       }
     }
@@ -22274,7 +22302,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var FilmList = function FilmList(props) {
   var films = props.films.map(function (film) {
-    return _react2.default.createElement(_Film2.default, { key: film.show_id, poster: film.poster, title: film.show_title });
+    return _react2.default.createElement(_Film2.default, { key: film.show_id, poster: film.poster, title: film.show_title, summary: film.summary });
   });
 
   return _react2.default.createElement(
@@ -22331,7 +22359,7 @@ var SearchBar = function (_React$Component) {
         { className: 'search-bar' },
         _react2.default.createElement('input', { onChange: function onChange(event) {
             return _this2.onInputChange(event.target.value);
-          }, placeholder: 'Enter an actor\'s name to see what movies they have on Netflix!' })
+          }, placeholder: 'Enter an actor\'s name to see what movies they are in on Netflix!' })
       );
     }
   }]);
