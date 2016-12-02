@@ -48,6 +48,10 @@ input {
   position: relative;
 }
 
+.film img {
+  max-width: 100%;
+}
+
 .film--no-picture {
   display: flex;
   background: url('./despicable.jpg');
